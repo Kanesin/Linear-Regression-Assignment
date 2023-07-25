@@ -17,3 +17,73 @@ They have contracted a consulting company to understand the factors on which the
 • How well those variables describe the bike demands
 
 Based on various meteorological surveys and people's styles, the service provider firm has gathered a large dataset on daily bike demands across the American market based on some factors.
+
+## Dataset Used
+
+The dataset being used is day.csv
+day.csv have the following fields:
+	
+	- instant: record index
+	- dteday : date
+	- season : season (1:spring, 2:summer, 3:fall, 4:winter)
+	- yr : year (0: 2018, 1:2019)
+	- mnth : month ( 1 to 12)
+	- holiday : weather day is a holiday or not (extracted from http://dchr.dc.gov/page/holiday-schedule)
+	- weekday : day of the week
+	- workingday : if day is neither weekend nor holiday is 1, otherwise is 0.
+	+ weathersit : 
+		- 1: Clear, Few clouds, Partly cloudy, Partly cloudy
+		- 2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist
+		- 3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds
+		- 4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog
+	- temp : temperature in Celsius
+	- atemp: feeling temperature in Celsius
+	- hum: humidity
+	- windspeed: wind speed
+	- casual: count of casual users
+	- registered: count of registered users
+	- cnt: count of total rental bikes including both casual and registered
+## License of the dataset
+Use of this dataset in publications must be cited to the following publication:
+
+Fanaee-T, Hadi, and Gama, Joao, "Event labeling combining ensemble detectors and background knowledge", Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, doi:10.1007/s13748-013-0040-3.
+
+@article{
+	year={2013},
+	issn={2192-6352},
+	journal={Progress in Artificial Intelligence},
+	doi={10.1007/s13748-013-0040-3},
+	title={Event labeling combining ensemble detectors and background knowledge},
+	url={http://dx.doi.org/10.1007/s13748-013-0040-3},
+	publisher={Springer Berlin Heidelberg},
+	keywords={Event labeling; Event detection; Ensemble learning; Background knowledge},
+	author={Fanaee-T, Hadi and Gama, Joao},
+	pages={1-15}
+}
+
+## Conclusions
+| Feature          | Correlation Coefficient | Inference                                      |
+| ---------------- | ---------------------- | ---------------------------------------------- |
+| temp             | 0.549936               | Change in temperature affects rentals        |
+| yr               | 0.233056               | Increase in bike rentals per year            |
+| Light_Snow_Rain  | -0.288021              | Snow and rain inversely proportional to rentals |
+
+## Technology Used
+Jupyter Notebook version 6.5.4
+
+## Acknowledgements
+Give credit here.
+- This project was inspired by UpGrad
+  
+## References 
+1. https://seaborn.pydata.org/
+2. https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+3. https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols_ridge_variance.htmlhttps://www.simplilearn.com/tutorials/scikit-learn-tutorial/sklearn-linear-regression-with-examples
+4. https://python.plainenglish.io/ols-linear-regression-basics-with-pythons-scikit-learn-4ecfe88145b
+5. https://python.plainenglish.io/simple-linear-regression-with-ols-using-scikit-learn-41cdde1041d5
+6. https://stackabuse.com/linear-regression-in-python-with-scikit-learn/
+
+## Contact
+Created by Kanishka Sinha - feel free to contact me!
+
+
