@@ -72,7 +72,6 @@ Fanaee-T, Hadi, and Gama, Joao, "Event labeling combining ensemble detectors and
 Jupyter Notebook version 6.5.4
 
 ## Acknowledgements
-Give credit here.
 - This project was inspired by UpGrad
   
 ## References 
